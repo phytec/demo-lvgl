@@ -33,7 +33,9 @@
 							</tool>
 							<tool command="${CC}" id="cdt.managedbuild.tool.gnu.cross.c.linker.1657700436" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.link.option.libs.534055676" name="Libraries (-l)" superClass="gnu.c.link.option.libs" useByScannerDiscovery="false" valueType="libs">
-									<listOptionValue builtIn="false" value="pthread"/>
+									<listOptionValue builtIn="false" value="wayland-client"/>
+									<listOptionValue builtIn="false" value="wayland-cursor"/>
+									<listOptionValue builtIn="false" value="xkbcommon"/>
 								</option>
 								<option id="gnu.c.link.option.ldflags.31419147" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="${LDFLAGS}" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.1026277264" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
