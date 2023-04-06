@@ -2,10 +2,6 @@
 #include "lvgl/demos/lv_demos.h"
 #include "lv_drivers/wayland/wayland.h"
 #include <unistd.h>
-#include <pthread.h>
-#include <time.h>
-#include <sys/time.h>
-
 
 int main(void)
 {
