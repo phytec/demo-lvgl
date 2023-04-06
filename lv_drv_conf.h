@@ -174,7 +174,7 @@
  *  Wayland drivers (monitor, mouse, keyboard, touchscreen)
  *---------------------------------------*/
 #ifndef USE_WAYLAND
-#  define USE_WAYLAND       0
+#  define USE_WAYLAND       1
 #endif
 
 #if USE_WAYLAND
@@ -316,7 +316,7 @@
  *  Linux frame buffer device (/dev/fbx)
  *-----------------------------------------*/
 #ifndef USE_FBDEV
-#  define USE_FBDEV           1
+#  define USE_FBDEV           0
 #endif
 
 #if USE_FBDEV
@@ -439,7 +439,7 @@
  * Mouse or touchpad as evdev interface (for Linux based systems)
  *------------------------------------------------*/
 #ifndef USE_EVDEV
-#  define USE_EVDEV           1
+#  define USE_EVDEV           0
 #endif
 
 #ifndef USE_BSD_EVDEV
