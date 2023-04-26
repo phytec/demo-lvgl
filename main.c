@@ -21,6 +21,25 @@ int main(void)
     lv_img_set_src(cursor_obj, &mouse_cursor_icon);           /*Set the image source*/
     lv_indev_set_cursor(mouse, cursor_obj);             /*Connect the image  object to the driver*/
 
+    lv_group_t * g = lv_group_create();
+    lv_group_set_default(g);
+
+    lv_indev_t * cur_drv = NULL;
+    for (;;) {
+        cur_drv = lv_indev_get_next(cur_drv);
+        if (!cur_drv) {
+            break;
+        }
+
+        if (cur_drv->driver->type == LV_INDEV_TYPE_KEYPAD) {
+            lv_indev_set_group(cur_drv, g);
+        }
+
+        if (cur_drv->driver->type == LV_INDEV_TYPE_ENCODER) {
+            lv_indev_set_group(cur_drv, g);
+        }
+    }
+
     /*Create a Demo*/
     lv_demo_widgets();
 
