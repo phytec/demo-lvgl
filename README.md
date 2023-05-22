@@ -15,5 +15,5 @@ make
 ## Run the demo application
 
 ```
-./lvgl_wl
+./lvgl-demo-wl
 ```
