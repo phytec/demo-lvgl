@@ -10,7 +10,7 @@
 
 int main(void)
 {
-    /*LVGL init*/
+    /* LVGL init */
     lv_init();
 
     /* Wayland display init */
@@ -45,7 +45,7 @@ int main(void)
         }
     }
 
-    /*Create a Demo*/
+    /* Create a Demo */
     lv_demo_widgets();
 
     while(1) {
