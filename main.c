@@ -18,13 +18,12 @@ int main(void)
     lv_disp_t * disp = lv_wayland_create_window(1280, 800, "window", NULL);
     lv_wayland_window_set_fullscreen(disp, true);
 
-    lv_indev_t * mouse = lv_wayland_get_touchscreen(disp);
-
-    /*Set a cursor for the mouse*/
+    /* Set a cursor for the touchscreen */
+    lv_indev_t * touchscreen = lv_wayland_get_touchscreen(disp);
     LV_IMG_DECLARE(mouse_cursor_icon)
-    lv_obj_t * cursor_obj = lv_img_create(lv_scr_act()); /*Create an image object for the cursor */
-    lv_img_set_src(cursor_obj, &mouse_cursor_icon);           /*Set the image source*/
-    lv_indev_set_cursor(mouse, cursor_obj);             /*Connect the image  object to the driver*/
+    lv_obj_t * cursor_obj = lv_img_create(lv_scr_act()); /* Create an image object for the cursor  */
+    lv_img_set_src(cursor_obj, &mouse_cursor_icon); /* Set the image source */
+    lv_indev_set_cursor(touchscreen, cursor_obj); /* Connect the image object to the driver */
 
     lv_group_t * g = lv_group_create();
     lv_group_set_default(g);
